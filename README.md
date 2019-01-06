@@ -1,7 +1,5 @@
 # simba
 
-## No nonsense JavaScript framework
-
 ### Features
 
 * Immutable State by default. Uses [immer.js](https://github.com/mweststrate/immer) under the hood.
