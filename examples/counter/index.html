@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Click Counter</title>
+    <link href="https://unpkg.com/superstylin@1.0.3/src/index.css" rel="stylesheet" />
+  </head>
+<body>
+
+<script type='module'>
+/*
+  R: (...elements, mountNode)
+  Renders a seet of elements to the mountNode
+  H: (tag, [props], ...children) -> Element
+  Works like hyperscript but created dom nodes instead of markup
+*/
+
+import {R, H, CreateComponent} from 'https://cdn.jsdelivr.net/gh/santoshrajan/simba/simba.js'
+
+// render function for counter
+const render = (props, state) => H('h3', state.count)/
+
+// Create Counter Component
+const Counter = CreateComponent(render)
+
+// Create instance of counter component with initial state
+const counter = Counter({count: 0})
+
+R(
+  H('h1', 'Click Counter'),
+  H(counter),
+  H(
+    'button',
+    {onclick: () => counter(state => {state.count = state.count + 1})},
+    '+'
+  ),
+  H(
+    'button',
+    {onclick: () => counter(state => {state.count = state.count - 1})},
+    '-'
+  ),
+  document.body
+)
+
+</script>
+</body>
+</html>
