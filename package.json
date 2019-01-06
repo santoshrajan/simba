@@ -1,0 +1,25 @@
+{
+  "name": "@santoshrajan/simba",
+  "version": "0.0.1",
+  "description": "No Non Sense JavaScript Framework",
+  "main": "simba.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santoshrajan/simba.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Framework",
+    "React",
+    "Vue"
+  ],
+  "author": "Santosh Rajan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santoshrajan/simba/issues"
+  },
+  "homepage": "https://github.com/santoshrajan/simba#readme"
+}
