@@ -16,6 +16,6 @@
 
 #### Demos
 
-#### [Counter](https://santoshrajan.github.io/examples/counter)
+#### [Counter](https://santoshrajan.github.io/simba/examples/counter)
 
-#### [Counter](https://santoshrajan.github.io/examples/todo)
+#### [Counter](https://santoshrajan.github.io/simba/examples/todo)
