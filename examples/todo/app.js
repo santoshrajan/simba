@@ -9,6 +9,7 @@ import todos from './comps/todos.js'
 R(
   H('h1', { className: 'title is-1' }, 'Todo'),
   H(addNew, { className: 'field' }),
+  H('p', { className: 'help' }, 'Double click todo below to edit'),
   H(todos, { className: 'panel' }),
   document.getElementById('App')
 )
