@@ -13,14 +13,14 @@
 ### Usage
 
 CDN
-`
+```
 <script type='module'>
 import {R, H, CreateComponent} from 'https://cdn.jsdelivr.net/gh/santoshrajan/simba/simba.js'
-`
+```
 NPM
-`
+```
 $ npm install @santoshrajan/simba --save
-`
+```
 
 #### Demos
 
