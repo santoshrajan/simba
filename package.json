@@ -1,8 +1,9 @@
 {
   "name": "@santoshrajan/simba",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "No Non Sense JavaScript Framework",
-  "main": "simba.js",
+  "browser": "simba.min.js",
+  "module": "simba.module.js",
   "scripts": {
     "uglify": "uglifyjs simba.js --compress >simba.min.js",
     "gzip": "gzip -k simba.min.js",
@@ -17,12 +18,16 @@
     "JavaScript",
     "Framework",
     "React",
-    "Vue"
+    "Vue",
+    "Angular"
   ],
   "author": "Santosh Rajan",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/santoshrajan/simba/issues"
   },
-  "homepage": "https://github.com/santoshrajan/simba#readme"
+  "homepage": "https://github.com/santoshrajan/simba#readme",
+  "dependencies": {
+    "immer": "^1.10.0"
+  }
 }
