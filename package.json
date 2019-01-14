@@ -1,9 +1,8 @@
 {
   "name": "@santoshrajan/simba",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "No Non Sense JavaScript Framework",
-  "browser": "simba.min.js",
-  "module": "simba.module.js",
+  "browser": "simba.module.js",
   "scripts": {
     "uglify": "uglifyjs simba.js --compress >simba.min.js",
     "gzip": "gzip -k simba.min.js",
