@@ -58,27 +58,24 @@ export const R = (...nodes) => {
   }
 }
 
-export const CreateComponent = render => init => {
+export const CreateComponent = (render, _props = {}) => {
   let patches = []
   const comp = setState => {
-    if (isGenericObject(setState)) {
-      const ret = render(setState, comp[state])
-      ret[id] = uniqueElemId()
-      comp[id] = ret[id]
-      comp[props] = setState
-      return ret
-    }
     comp[state] = produce(comp[state], setState, p => {
       patches = p
     })
     if (patches.length > 0) {
       const newNode = render(comp[props], comp[state])
+      if (!comp[id]) {
+        newNode[id] = comp[id] = uniqueElemId()
+        return newNode
+      }
       const oldNode = findById(comp[id], document.body)
       newNode[id] = oldNode[id]
       oldNode.parentNode.replaceChild(newNode, oldNode)
     }
   }
-  comp[state] = init || {}
-  comp[props] = {}
+  comp[state] = {}
+  comp[props] = _props
   return comp
 }
