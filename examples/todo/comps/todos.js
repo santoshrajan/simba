@@ -4,4 +4,4 @@ const render = (props, state) => {
   return H('ul', ...state.todos)
 }
 
-export default CreateComponent(render)({ todos: [] })
+export default CreateComponent(render, { className: 'panel' })

@@ -2,11 +2,8 @@ import { H, CreateComponent } from 'https://cdn.jsdelivr.net/gh/santoshrajan/sim
 
 const render = (props, state) => H('li', props, state.text)
 
-const Todo = CreateComponent(render)
-
 export default initialState => {
-  const todo = Todo(initialState)
-  return todo({
+  const Todo = CreateComponent(render, {
     className: 'panel-block is-size-3',
     ondblclick: (e) => {
       const itemElem = e.target
@@ -16,7 +13,7 @@ export default initialState => {
         {
           className: 'input is-size-3',
           value: text,
-          onchange: (e) => todo(state => { state.text = editElem.value }),
+          onchange: (e) => Todo(state => { state.text = editElem.value }),
           onblur: (e) => {
             if (e.target.value === text) {
               itemElem.textContent = text
@@ -28,4 +25,5 @@ export default initialState => {
       editElem.focus()
     }
   })
+  return Todo(state => initialState)
 }

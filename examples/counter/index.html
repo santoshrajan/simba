@@ -23,20 +23,20 @@ const render = (props, state) => H('h3', state.count)
 // Create Counter Component
 const Counter = CreateComponent(render)
 
-// Create instance of counter component with initial state
-const counter = Counter({count: 0})
+// Set initial state
+
 
 R(
   H('h1', 'Click Counter'),
-  H(counter),
+  Counter(state => { state.count = 0 }),
   H(
     'button',
-    {onclick: () => counter(state => {state.count = state.count + 1})},
+    {onclick: () => Counter(state => {state.count = state.count + 1})},
     '+'
   ),
   H(
     'button',
-    {onclick: () => counter(state => {state.count = state.count - 1})},
+    {onclick: () => Counter(state => {state.count = state.count - 1})},
     '-'
   ),
   document.body

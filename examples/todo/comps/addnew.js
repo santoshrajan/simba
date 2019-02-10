@@ -1,6 +1,6 @@
 import { H } from 'https://cdn.jsdelivr.net/gh/santoshrajan/simba/simba.js'
 
-import todos from './todos.js'
+import Todos from './todos.js'
 
 import createTodo from './todo.js'
 
@@ -9,7 +9,7 @@ const onAddNew = (e) => {
   const value = e.target.value.trim()
   if (value.length === 0) return
   const todoElem = createTodo({ text: value })
-  todos(state => { state.todos.unshift(todoElem) })
+  Todos(state => { state.todos.unshift(todoElem) })
   e.target.value = ''
 }
 
