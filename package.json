@@ -1,6 +1,6 @@
 {
   "name": "@santoshrajan/simba",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "No Non Sense JavaScript Framework",
   "browser": "simba.module.js",
   "scripts": {
